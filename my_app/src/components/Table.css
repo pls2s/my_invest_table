@@ -92,3 +92,18 @@ tbody tr:hover {
 }
 .btn-delete:hover { opacity: .9; }
 .btn-delete:active { transform: scale(.97); }
+
+.btn-edit {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .15s ease, transform .05s ease;
+  margin: 5px;
+}
+.btn-edit:hover { opacity: .9; }
+.btn-edit:active { transform: scale(.97); }

@@ -20,6 +20,7 @@ export default function Table({ items, onDelete }) {
             <th>Type</th>
             <th>Shares</th>
             <th>Price</th>
+            <th>Buy Price</th>
             <th>Fee</th>
             <th>Portfolio</th>
             <th className="right">Action</th>
@@ -33,9 +34,11 @@ export default function Table({ items, onDelete }) {
               <td>{r.type}</td>
               <td>{r.shares}</td>
               <td>{r.price}</td>
+              <td>{r.buyPrice}</td>
               <td>{r.fee}</td>
               <td>{r.portfolio}</td>
               <td className="right">
+                <button className="btn-edit" onClick={() => navigate(`/edit/${r.id}`)}>Edit</button>
                 <button className="btn-delete" onClick={() => confirmDelete(r.id)}>
                   Delete
                 </button>

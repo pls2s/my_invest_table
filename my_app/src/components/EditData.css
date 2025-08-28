@@ -1,0 +1,95 @@
+:root {
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --blue: #3b82f6;
+  --blue-dark: #2563eb;
+  --purple: #6366f1;
+  --shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* พื้นหลัง */
+.form-wrap {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+}
+
+/* กล่องฟอร์ม */
+.form-card {
+  width: min(600px, 100%);
+  background: var(--surface);
+  border: 2px solid #bfdbfe;   /* ฟ้าอ่อน */
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+/* หัวข้อ */
+.form-card h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ช่องกรอก */
+form input,
+form select {
+  display: block;
+  width: 90%;
+  margin: 10px 0;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.15);
+}
+
+/* ปุ่ม */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity .15s, transform .05s;
+}
+.btn:active { transform: scale(.97); }
+
+/* ปุ่มบันทึก (ฟ้า) */
+.btn.primary {
+  background: var(--blue);
+  color: #fff;
+}
+.btn.primary:hover { background: var(--blue-dark); }
+
+/* ปุ่มยกเลิก */
+.btn.ghost {
+  background: #f1f5f9;
+  color: var(--text);
+}
+.btn.ghost:hover {
+  background: #e2e8f0;
+}
