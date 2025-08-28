@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: { alias: {} },
   optimizeDeps: { include: [], exclude: [] },
+  base: "/my_inveest_table/",
+  
+  
 });

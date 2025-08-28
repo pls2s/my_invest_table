@@ -21,6 +21,7 @@ export default function App() {
 
   return (
     <Routes>
+      
       <Route path="/" element={<Table items={items} onDelete={handleDelete} />} />
       <Route path="/add" element={<AddNewData onAdd={handleAdd} />} />
     </Routes>
